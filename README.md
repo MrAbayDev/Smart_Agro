@@ -1,57 +1,102 @@
-# SmartAgro loyihasining davlat va xalqqa foydalari
+# SmartAgro
 
-## Iqtisodiy foydalari
+SmartAgro - bu zamonaviy qishloq xo'jaligi korxonalari uchun kompleks boshqaruv va monitoring tizimi. Laravel frameworkida qurilgan ushbu tizim fermerlar va agrobiznes vakillariga o'z faoliyatlarini samarali boshqarish, hosildorlikni oshirish va resurslardan oqilona foydalanish imkonini beradi.
 
-1. **Qishloq xo'jaligi samaradorligining oshishi**:
-    - Hosildorlikning ortishi natijasida milliy oziq-ovqat ishlab chiqarishining ko'payishi
-    - Eksport salohiyatining oshishi va valyuta tushumining ko'payishi
+## Tizim talablari
 
-2. **Resurslardan oqilona foydalanish**:
-    - Suv, o'g'it va boshqa resurslarning tejalishi natijasida ishlab chiqarish xarajatlarining kamayishi
-    - Tabiiy resurslarning saqlanishi
+- PHP >= 8.1
+- MySQL >= 8.0
+- Composer
+- Node.js va NPM
 
-3. **Fermerlar daromadining oshishi**:
-    - Samaradorlik oshishi hisobiga fermerlar foydasining ko'payishi
-    - Qishloq aholisi turmush darajasining yaxshilanishi
+## O'rnatish
 
-4. **Innovatsion texnologiyalar rivojlanishi**:
-    - IT va qishloq xo'jaligi sohasidagi yangi ish o'rinlarining yaratilishi
-    - Mahalliy texnologik yechimlar ishlab chiqarishning rivojlanishi
+1. Loyiha repozitoriyasini klonlash:
+   ```
+   git clone https://github.com/your-username/smart-agro.git
+   cd smart-agro
+   ```
 
-## Ijtimoiy foydalari
+2. Composer orqali kerakli paketlarni o'rnatish:
+   ```
+   composer install
+   ```
 
-1. **Oziq-ovqat xavfsizligining ta'minlanishi**:
-    - Mahsulot sifati va miqdorining barqaror ta'minlanishi
-    - Oziq-ovqat narxlarining barqarorlashuvi
+3. NPM paketlarini o'rnatish va frontend resurslarni kompilyatsiya qilish:
+   ```
+   npm install
+   npm run dev
+   ```
 
-2. **Qishloq aholisi hayot sifatining yaxshilanishi**:
-    - Zamonaviy texnologiyalardan foydalanish orqali mehnat sharoitlarining yaxshilanishi
-    - Qishloq yoshlari uchun jozibador ish o'rinlarining paydo bo'lishi
+4. `.env.example` faylidan nusxa olib, `.env` faylini yaratish va sozlash:
+   ```
+   cp .env.example .env
+   ```
+   `.env` faylida ma'lumotlar bazasi bog'lanishi va boshqa sozlamalarni o'zgartiring.
 
-3. **Ta'lim va malaka oshirish imkoniyatlari**:
-    - Fermerlar va qishloq xo'jaligi mutaxassislarining raqamli ko'nikmalarini oshirish
-    - Zamonaviy agrotexnologiyalar bo'yicha bilimlarning ortishi
+5. Ilova uchun yangi kalit generatsiya qilish:
+   ```
+   php artisan key:generate
+   ```
 
-## Ekologik foydalari
+6. Ma'lumotlar bazasi migratsiyalarini amalga oshirish:
+   ```
+   php artisan migrate
+   ```
 
-1. **Atrof-muhitga salbiy ta'sirning kamayishi**:
-    - Pestitsidlar va kimyoviy o'g'itlardan oqilona foydalanish natijasida tuproq va suv havzalarining ifloslanishini kamaytirish
-    - Suvdan tejamli foydalanish orqali suv resurslarining saqlanishi
+7. (Ixtiyoriy) Test ma'lumotlarini yuklash:
+   ```
+   php artisan db:seed
+   ```
 
-2. **Iqlim o'zgarishiga moslashish**:
-    - Ob-havo ma'lumotlaridan samarali foydalanish orqali iqlim o'zgarishlariga tezkor moslashish
-    - Qishloq xo'jaligidan chiqadigan issiqxona gazlari emissiyasini kamaytirish
+## Ishga tushirish
 
-## Davlat boshqaruvi va siyosat sohasidagi foydalari
+Lokal development serverni ishga tushirish:
+```
+php artisan serve
+```
 
-1. **Qishloq xo'jaligi sohasida aniq ma'lumotlarga asoslangan qarorlar qabul qilish**:
-    - Real vaqtdagi ma'lumotlar asosida tezkor va samarali siyosat yuritish
-    - Subsidiya va yordam dasturlarini maqsadli yo'naltirish imkoniyati
+Tizimga brauzeringiz orqali `http://localhost:8000` manzilida kirishingiz mumkin.
 
-2. **Oziq-ovqat xavfsizligi strategiyasini takomillashtirish**:
-    - Hosil bashoratlarining aniqligi oshishi natijasida strategik zaxiralarni boshqarishning yaxshilanishi
-    - Oziq-ovqat importi va eksportini samarali rejalashtirish
+## Asosiy funksionallik
 
-3. **Qishloq xo'jaligini raqamlashtirish jarayonini tezlashtirish**:
-    - Raqamli texnologiyalarni joriy etish uchun infratuzilmani rivojlantirish
-    - Qishloq xo'jaligida innovatsion yechimlarni qo'llashni rag'batlantirish
+1. **Foydalanuvchilar boshqaruvi**: Tizimga kirish, ro'yxatdan o'tish va foydalanuvchi rollarini boshqarish.
+
+2. **Fermalar va maydonlar**: Ferma xo'jaliklari va ekin maydonlarini ro'yxatga olish va boshqarish.
+
+3. **Ekinlar monitoringi**: Ekin turlarini kiritish, ekin sikllarini kuzatish va hosildorlikni bashorat qilish.
+
+4. **Resurslar boshqaruvi**: Urug', o'g'it va boshqa resurslarni hisobga olish va ulardan foydalanishni kuzatish.
+
+5. **Ob-havo ma'lumotlari**: Tashqi API'lar orqali ob-havo ma'lumotlarini olish va tahlil qilish.
+
+6. **IoT integratsiyasi**: Dala sensori ma'lumotlarini qabul qilish va qayta ishlash.
+
+7. **Moliyaviy boshqaruv**: Daromad va xarajatlarni kuzatish, moliyaviy hisobotlarni shakllantirish.
+
+8. **Vazifalar rejalashtirish**: Qishloq xo'jaligi ishlarini rejalashtirish va nazorat qilish.
+
+9. **Tahliliy hisobotlar**: Turli ko'rsatkichlar bo'yicha vizual hisobotlar yaratish.
+
+## API hujjatlari
+
+API hujjatlarini ko'rish uchun `http://localhost:8000/api/documentation` manziliga o'ting.
+
+## Testlarni ishga tushirish
+
+Loyiha testlarini ishga tushirish uchun quyidagi buyruqni bajaring:
+```
+php artisan test
+```
+
+## Muammolar yuzaga kelganda
+
+Agar tizimni o'rnatish yoki ishlatish jarayonida muammolarga duch kelsangiz, iltimos, [Issues](https://github.com/your-username/smart-agro/issues) bo'limida yangi muammo yarating.
+
+## Hissa qo'shish
+
+Loyihaga hissa qo'shish uchun [CONTRIBUTING.md](CONTRIBUTING.md) faylini o'qing.
+
+## Litsenziya
+
+Bu loyiha MIT litsenziyasi ostida tarqatiladi. Batafsil ma'lumot uchun [LICENSE](LICENSE) faylini ko'ring.
